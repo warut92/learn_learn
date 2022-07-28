@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>บวกกันง่าย ๆ</title>
+    <style media="screen">
+      @import url('https://cdn.jsdelivr.net/gh/lazywasabi/thai-web-fonts@6/fonts/TlwgTypewriter/TlwgTypewriter.css');
+      body, button, input {
+        font-family: 'Tlwg Typewriter', monospace;
+        text-align: center;
+        background-color: lightgrey;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>บวกกันง่าย ๆ</h1>
+    <p id="numPostion1">0</p>
+    +
+    <p id="numPostion2">0</p>
+    <br>
+    <input id="inputNum" type="text" pattern="\d*">
+    <br>
+    <br>
+    <button type="button" onclick="randomNum()">คอมสุ่ม</button>
+    <button type="button" onclick="check()">ตรวจ</button>
+    <p id="massageAlert">ข้อความ</p>
+  </body>
+  <script>
+      let innerHTMLResult;
+
+      function randomNum() {
+        document.getElementById("massageAlert").innerHTML = "เกมใหม่!"
+        document.getElementById("inputNum").value = ""
+
+        var randomNum1 = Math.floor(Math.random() * 100)
+        document.getElementById("numPostion1").innerHTML = randomNum1
+        var randomNum2 = Math.floor(Math.random() * 100)
+        document.getElementById("numPostion2").innerHTML = randomNum2
+
+        innerHTMLResult =  randomNum1 + randomNum2;
+        console.log('คำตอบ ', innerHTMLResult)
+      }
+
+      function check() {
+        let inputAnswer = document.getElementById('inputNum')
+        inputAnswer = Number(inputAnswer.value)
+        console.log("คำตอบ", innerHTMLResult, "สิ่งที่ตอบ", inputAnswer)
+
+        if (inputAnswer == innerHTMLResult) {
+          document.getElementById("massageAlert").innerHTML = "ถูกต้มมม!"
+        } else {
+          document.getElementById("massageAlert").innerHTML = "ยังไม่ช่าย  ลองใหม่นะ!"
+        }
+      }
+  </script>
+</html>

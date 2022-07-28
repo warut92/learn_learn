@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>เครื่องคิดเลขธรรมดา ๆ</title>
+    <style media="screen">
+      @import url('https://cdn.jsdelivr.net/gh/lazywasabi/thai-web-fonts@6/fonts/TlwgTypewriter/TlwgTypewriter.css');
+      body, button, input {
+        font-family: 'Tlwg Typewriter', monospace;
+        text-align: center;
+        background-color: lightgrey;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+<p>เครื่องคิดเลขธรรมดา ๆ</p>
+<input id="num1" oninput="plus()"></input>+<input id="num2" oninput="plus()"></input>
+=<span id="result"> 0</span>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p>สูตรคูณง่าย ๆ</p>
+<input id="numForMultiple" oninput="multipleFunction()"></input>
+<p id="multipleResult"></p>
+<script type="text/javascript">
+function plus() {
+  let number1 = document.getElementById("num1");
+  let number2 = document.getElementById("num2");
+
+  let numTrue1 = Number(number1.value)
+  let numTrue2 = Number(number2.value)
+
+  let numResult = numTrue1 + numTrue2
+
+  document.getElementById("result").innerText =  numResult
+}
+
+function multipleFunction() {
+  let ForMultiple = document.getElementById("numForMultiple")
+  let numForMultiple = Number(ForMultiple.value)
+  let multipleResult = ""
+  for (var i = 1; i < 13; i++) {
+    multipleResult += numForMultiple + " x " + i + " = " + numForMultiple * i + "<br>";
+    console.log('MULTIPLERESULT', multipleResult)
+  }
+  document.getElementById("multipleResult").innerHTML = multipleResult
+
+
+}
+
+
+</script>
+  </body>
+</html>
