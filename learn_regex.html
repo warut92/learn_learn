@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <textarea id="myTextArea" name="name" rows="8" cols="80" oninput="myFun()">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna //aliqua//. Ut enim ad (minim) veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure (dolor) in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, //sunt// in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+    <textarea id="textResult" name="name" rows="8" cols="80"></textarea>
+    <textarea id="myRegexTextResult" name="name" rows="8" cols="80"></textarea>
+  </body>
+  <script type="text/javascript">
+    myFun()
+    function myFun() {
+      let myText = document.getElementById("myTextArea").value
+      document.getElementById("textResult").value = myText
+
+      // let myRegexText = myText.replace(/ *\([^)]*\) */g, "<B><font color=green size=-1>.</font></B>")
+      let myRegexText = myText.replace(/ *\([^)]*\) */g, " (TEXT) ")
+        document.getElementById("myRegexTextResult").innerHTML = myRegexText
+        console.log('MYREGEXTEXT', myRegexText)
+
+    }
+  </script>
+</html>

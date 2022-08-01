@@ -13,23 +13,22 @@
 
 <body>
   <p id="nowTime"></p>
+  <button type="button" name="button" id="countdown5" onclick="minuteCountdown(0.15)">15sec</button>
+
   <button type="button" name="button" id="countdown5" onclick="minuteCountdown(1)">1</button>
+
   <button type="button" name="button" id="countdown5" onclick="minuteCountdown(5)">5</button>
+
   <button type="button" name="button" id="countdown10" onclick="minuteCountdown(10)">10</button>
+
   <button type="button" name="button" id="countdown15" onclick="minuteCountdown(15)">15</button>
+  <!-- text -->
   <p id="timeForCountdown">0</p>
+
+
   <script>
-  // let fiveMinute = document.getElementById("countdown5");
-  // let tenMinute = document.getElementById("countdown10");
-  // let fifteenMinute = document.getElementById("countdown15");
-  //
-  // fiveMinute = Number(fiveMinute.value);
-  // tenMinute = Number(tenMinute.value);
-  // fifteenMinute = Number(fifteenMinute.value);
-
-
-  //run this funtion when the page is opened.
-  time()
+    //run this funtion when the page is loaded.
+time()
 
     function time() {
       let date = new Date();
@@ -42,27 +41,25 @@
       mm = (mm < 10) ? "0" + mm : mm;
       ss = (ss < 10) ? "0" + ss : ss;
 
+      let ssTime = ((hh * 60) * 60) + (mm * 60) + ss
+      let timeOutPut = hh + ":" + mm + ":" + ss
       //output the time to the page
-      document.getElementById("nowTime").innerHTML = hh + ":" + mm + ":" + ss;
+      document.getElementById("nowTime").innerHTML = timeOutPut + "<br>" + ssTime;
 
       let t = setTimeout(function() {
         time()
-      }, 1000);
-      return ((hh * 60) * 60) + (mm * 60) + ss;
+      }, 60);
+
+      return ssTime;
     }
 
     function minuteCountdown(minute) {
-      document.getElementById("timeForCountdown").innerText = minute;
-      let timeNow = time()
-      var timeAlert = timeNow + (minute * 60)
-      console.log('TIMEALERT', timeAlert)
-        console.log("now",timeNow)
+      document.getElementById("timeForCountdown").innerHTML = "อีก " + minute + " นาที ";
+      let now = time()
+      console.log('NOW', now)
 
     }
-    minuteCountdown(timeAlert);
-    if (timeAlert === time()) {
-      alert("hi")
-    }
+
   </script>
 </body>
 
