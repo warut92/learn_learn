@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>บัญญัติไตรยางค์</title>
+    <style media="screen">
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    บัญญัติไตรยางค์
+    <br>
+    ถ้า <input id="input1" oninput="ruleOfThree()">
+    เท่ากับ <input id="input2" oninput="ruleOfThree()">
+    <br>
+    แล้ว <input id="input3" oninput="ruleOfThree()">
+    เท่ากับ <input id="input4" value="x">
+    <script>
+
+      function ruleOfThree() {
+        let a = document.getElementById("input1");
+        let b = document.getElementById("input2");
+        let c = document.getElementById("input3");
+        let d = document.getElementById("input4");
+
+        a = Number(a.value);
+        b = Number(b.value);
+        c = Number(c.value);
+        d = Number(d.value);
+
+        let result = (c * b) / a;
+
+        document.getElementById("input4").value = result;
+      }
+    </script>
+  </body>
+</html>

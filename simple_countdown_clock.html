@@ -22,8 +22,9 @@
   <button type="button" name="button" id="countdown10" onclick="minuteCountdown(10)">10</button>
 
   <button type="button" name="button" id="countdown15" onclick="minuteCountdown(15)">15</button>
+  <button type="button" name="button" onclick="click()">start</button>
   <!-- text -->
-  <p id="timeForCountdown">0</p>
+  <p id="timeForCountdown">อีก 0 นาที</p>
 
 
   <script>
@@ -52,14 +53,12 @@ time()
 
       return ssTime;
     }
-
+/////////////////////////////////////
     function minuteCountdown(minute) {
       document.getElementById("timeForCountdown").innerHTML = "อีก " + minute + " นาที ";
-      let now = time()
-      console.log('NOW', now)
-
-    }
-
+      console.log('MINUTE', minute)
+      return minute;
+      }
   </script>
 </body>
 
