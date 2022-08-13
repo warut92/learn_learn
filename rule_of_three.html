@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>บัญญัติไตรยางค์</title>
     <style media="screen">
       body {
@@ -12,11 +13,11 @@
   <body>
     บัญญัติไตรยางค์
     <br>
-    ถ้า <input id="input1" oninput="ruleOfThree()">
-    เท่ากับ <input id="input2" oninput="ruleOfThree()">
+    ถ้า <input id="input1" pattern="\d*" maxlength="10" size="4" oninput="ruleOfThree()">
+    เท่ากับ <input id="input2" pattern="\d*" maxlength="10" size="4" oninput="ruleOfThree()">
     <br>
-    แล้ว <input id="input3" oninput="ruleOfThree()">
-    เท่ากับ <input id="input4" value="x">
+    แล้ว <input id="input3" pattern="\d*" maxlength="10" size="4" oninput="ruleOfThree()">
+    เท่ากับ <input id="input4" pattern="\d*" maxlength="10" size="4" value="x">
     <script>
 
       function ruleOfThree() {
