@@ -1,40 +1,91 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>บัญญัติไตรยางค์</title>
-    <style media="screen">
-      body {
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    บัญญัติไตรยางค์
-    <br>
-    ถ้า <input id="input1" pattern="\d*" maxlength="10" size="4" oninput="ruleOfThree()">
-    เท่ากับ <input id="input2" pattern="\d*" maxlength="10" size="4" oninput="ruleOfThree()">
-    <br>
-    แล้ว <input id="input3" pattern="\d*" maxlength="10" size="4" oninput="ruleOfThree()">
-    เท่ากับ <input id="input4" pattern="\d*" maxlength="10" size="4" value="x">
-    <script>
 
-      function ruleOfThree() {
-        let a = document.getElementById("input1");
-        let b = document.getElementById("input2");
-        let c = document.getElementById("input3");
-        let d = document.getElementById("input4");
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>บัญญัติไตรยางค์</title>
+  <style media="screen">
+    @import url('https://cdn.jsdelivr.net/gh/lazywasabi/thai-web-fonts@6/fonts/TlwgTypewriter/TlwgTypewriter.css');
 
-        a = Number(a.value);
-        b = Number(b.value);
-        c = Number(c.value);
-        d = Number(d.value);
+    body,
+    button,
+    input {
+      font-family: 'Tlwg Typewriter', monospace;
+      text-align: center;
+      font-size: 70px;
+    }
 
-        let result = (c * b) / a;
+    .main {
+      display: flex;
+      align-items: baseline;
+    }
 
-        document.getElementById("input4").value = result;
-      }
-    </script>
-  </body>
+    .main div {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  บัญญัติไตรยางค์
+  <br>
+  <div class="main">
+    <div>
+    </div>
+    <div>
+      ถ้า
+    </div>
+    <div>
+      <input id="input1" pattern="\d*" maxlength="10" size="4" oninput="ruleOfThree()">
+    </div>
+    <div>
+      เท่ากับ
+    </div>
+    <div>
+      <input id="input2" pattern="\d*" maxlength="10" size="4" oninput="ruleOfThree()">
+    </div>
+    <div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div>
+    </div>
+    <div>
+      แล้ว
+    </div>
+    <div>
+      <input id="input3" pattern="\d*" maxlength="10" size="4" oninput="ruleOfThree()">
+    </div>
+    <div>
+      เท่ากับ
+    </div>
+    <div>
+      <input id="input4" pattern="\d*" maxlength="10" size="4" value="x">
+    </div>
+    <div>
+    </div>
+  </div>
+  <script>
+    function ruleOfThree() {
+      let a = document.getElementById("input1");
+      let b = document.getElementById("input2");
+      let c = document.getElementById("input3");
+      let d = document.getElementById("input4");
+
+      a = Number(a.value);
+      b = Number(b.value);
+      c = Number(c.value);
+      d = Number(d.value);
+
+      let result = (c * b) / a;
+
+      document.getElementById("input4").value = result;
+    }
+  </script>
+</body>
+
 </html>

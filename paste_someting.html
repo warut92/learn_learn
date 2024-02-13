@@ -1,44 +1,411 @@
 <html>
 <head>
-  <script>
-// split rows into columns
+  <style media="screen">
+    input {
+      width: 50px
+    }
+  </style>
 
-  for (i=0; i<clipRows.length; i++) {
-      clipRows[i] = clipRows[i].split(String.fromCharCode(9));
-  }
-
-
-  // write out in a table
-
-  newTable = document.createElement("table")
-  newTable.border = 1;
-  for (i=0; i<clipRows.length - 1; i++) {
-
-      newRow = newTable.insertRow();
-
-      for (j=0; j<clipRows[i].length; j++) {
-          newCell = newRow.insertCell();
-          if (clipRows[i][j].length == 0) {
-              newCell.innerText = ' ';
-          }
-          else {
-              newCell.innerText = clipRows[i][j];
-          }
-      }
-  }
-
-  document.body.appendChild(newTable);
-}
-</script>
 </head>
 <body>
-<input type="button" onclick="clip()" value="button">
-<input type="text" name="" value=""><br>
-<input type="text" name="" value=""><br>
-<input type="text" name="" value=""><br>
-<input type="text" name="" value=""><br>
-<input type="text" name="" value=""><br>
-<input type="text" name="" value=""><br>
-<input type="text" name="" value=""><br>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value="">
+  <input type="text" name="" value=""><br><hr>
+
+
 </body>
+<script>
+console.log("it's work55!")
+document.addEventListener("paste", (event) => {
+  event.preventDefault();
+  //copy data from speadsheet and manipulate something
+  let score_data = (event.clipboardData || window.clipboardData).getData("text");
+  score_data = score_data.split("\n")
+  score_data = score_data.toString().split("\t")
+  score_data = score_data.toString().split(",")
+  console.log('score_data', score_data)
+
+  //creat arr for 40
+  const score_data_40 = score_data.filter((score_data) => (score_data.length % 2) === 0)
+  console.log('SCORE_DATA_40 ', score_data_40 )
+
+  //creat arr for 10
+  const score_data_10 = score_data
+  .map((value, index) => ({ value, index })) // Create an array of objects containing value and index
+  .filter(obj => obj.value % 2 === 0) // Filter objects with even values
+  .map(obj => obj.index); // Extract the indices
+  console.log('SCORE_DATA_10 ', score_data_10 )
+
+  // find all other text inputs
+  let allInputNode = document.querySelectorAll('input');
+  let row_40, row_10
+    for (let i = 0; i < allInputNode.length; i++) {
+      let round = 13
+      row_40 = 29
+      row_10 = 32
+      allInputNode[row_40].style.backgroundColor = "red"
+      allInputNode[row_40 + (round * i)].value = score_data_40[i]
+      allInputNode[row_10 + (round * i)].value = score_data_10[i]
+    }
+});
+
+document.addEventListener("click", function() {
+  console.log("it's work!")
+});
+
+
+
+
+// // Listen to paste on the document
+// document.addEventListener("paste", function(e) {
+//   // if the target is a text input
+//   if (e.target.type === "text") {
+//    var data = e.clipboardData.getData('Text');
+//    // split clipboard text into single characters
+//    data = data.split('');
+//    // find all other text inputs
+//    [].forEach.call(document.querySelectorAll("input[type=text]"), (node, index) => {
+//       // And set input value to the relative character
+//       node.value = data[index];
+//     });
+//   }
+// });
+
+// document.getElementById('editableDiv').addEventListener('paste', handlePaste);
+</script>
 </html>
